@@ -1,0 +1,35 @@
+.point{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.point icon{
+    padding: 10rpx;
+    margin: 40rpx 0 0 20rpx;
+}
+.point .text{
+    font-size: 40rpx;
+    font-weight: 20rpx;
+    margin: 40rpx 0 0 20rpx;
+}
+.area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.area .feed_content{
+    border-radius:5rpx;
+    background-color:rgb(241,241,241,.98);
+    width: 720rpx;
+    height: 432rpx;
+    margin: 20rpx;
+    padding: 20rpx;
+    resize: none;
+}
+.area button{
+    margin: 40rpx;
+    color: #fff;
+    background-color: #2196F3;
+}

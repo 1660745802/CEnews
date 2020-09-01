@@ -1,0 +1,70 @@
+<wxs module="search" src="channel.wxs"/>
+<!-- 频道页面： 查词，新闻频道入口 -->
+<view class="page">
+    <!-- 查词界面 -->
+    <view class="search_area" >
+        <view class="searchBar">
+            <!-- 退出查词界面 -->
+            <view class="back" bindtap="{{search.hiddenMask}}">
+                <icon class="t-icon t-icon-arrow-left-bold" />
+                <view>Back</view>     
+            </view>
+            <!-- 输入框 -->
+            <view class="search_input">
+                <icon class="t-icon t-icon-search1"/>
+                <input placeholder="搜索查词" placeholder-style="font-size:30rpx;" value="{{inputText}}" focus="true" bindinput="searchInput"/>
+                <icon class="t-icon t-icon-guanbi" hidden="{{!inputText}}" bindtap="clearInput"/>
+            </view>
+            <!-- 备选词列表 -->
+            <view class="search_content" hidden="{{!inputText}}">
+                <view class="search_item" wx:for="{{wordslist}}" wx:key="item">
+                    <view class="word">{{item[0]}}</view>
+                    <view>{{item[1]}}</view>
+                </view>
+            </view>
+            <!-- 点击输入框下方空白退出查词界面 -->
+            <view class="back1" bindtap="{{search.hiddenMask}}" hidden="{{inputText}}"></view>
+        </view>
+    </view>
+    <!-- 隐藏查词界面时的查词外观 -->
+    <view class="dict_out" bindtap="{{search.hiddenMask}}">
+        <view class="input">
+            <icon class="t-icon t-icon-search1"/>
+            <view>搜索查词</view>
+        </view>
+    </view>
+
+    <!-- 频道板块 -->
+    <view class="channel_area">
+        <template name="list">
+            <view class="list">
+                <navigator class="cells" url="{{url}}">
+                    <view class="cell">
+                        <view>
+                            <icon class="{{icon_font}}"></icon>
+                        </view>
+                        <view class="cell_content">{{content}}</view>
+                    </view>
+                </navigator>
+            </view>
+        </template>
+    </view>
+</view>
+
+<template is="list" data="{{...china}}"></template>
+<template is="list" data="{{...world}}"></template>
+<template is="list" data="{{...society}}"></template>
+<template is="list" data="{{...law}}"></template>
+<template is="list" data="{{...life}}"></template>
+<template is="list" data="{{...amusment}}"></template>
+<template is="list" data="{{...science}}"></template>
+<template is="list" data="{{...economy}}"></template>
+<template is="list" data="{{...edu}}"></template>
+<template is="list" data="{{...health}}"></template>
+<template is="list" data="{{...rollData}}"></template>
+<template is="list" data="{{...morenews}}"></template>
+
+
+
+
+

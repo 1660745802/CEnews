@@ -1,0 +1,33 @@
+<!-- 新闻浏览记录页面 -->
+<!-- 清空按钮 -->
+<view class="del">
+    <button size="mini" bindtap="deleteAll">清空</button>
+</view>
+<!-- 历史记录列表 -->
+<view class="history_news" wx:for="{{datelist}}" wx:for-item="dateitem">
+    <!-- 浏览日期 -->
+    <view class="read_date" wx:if="{{dateitem}}">
+        <icon class="t-icon t-icon-biaoshi"></icon>
+        <view class="datetext" >{{dateitem}}</view>
+    </view>
+    <!-- 页面为空时显示图片 -->
+    <image class="no_data" src="../../static/image/no_data.png" wx:else></image>
+    <!-- 历史新闻，左划删除 -->
+    <view wx:for="{{newslist[dateitem]}}" wx:key="index" data-item="{{dateitem}}" data-id="{{index}}" bindtap="bindHistory">
+        <i-swipeout  i-class="i-swipeout-demo-item" operateWidth="{{85}}">
+            <view slot="content">
+                <navigator class="read_news" url="../news/news?url={{item.url}}&date={{item.focus_date}}&title={{item.title}}&image={{item.image}}">
+                        <view class="new_left"> 
+                            <view class="new_title">{{item.title}}</view>
+                            <view class="new_tip">{{item.brief}}</view>
+                        </view>
+                    <view class="i-swipeout-image">
+                        <view class="new_right" wx:if="{{item.image}}"><image mode="aspectFill" src="{{item.image}}"></image></view>
+                    </view>
+                </navigator>
+            </view>
+            <view slot="button" data-item="{{dateitem}}" data-id="{{index}}" class="i-swipeout-demo-button" bindtap="deleteHistory">删除</view>
+        </i-swipeout>
+    </view>
+</view>
+

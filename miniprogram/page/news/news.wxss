@@ -1,0 +1,142 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+swiper {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+swiper-item image {
+  position: absolute;
+  width: 750rpx;
+  height: auto;
+}
+
+.title {
+  margin-left: 40rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+  margin-top: 30rpx;
+  letter-spacing: 2px;
+  color: #4b556c;
+}
+
+.author-date {
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.date {
+  font-size: 24rpx;
+  margin-left: 30rpx;
+  color: #999;
+  vertical-align: middle;
+}
+
+.tool {
+  margin-top: 20rpx;
+}
+
+.circle-img {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+}
+
+.circle-img icon{
+  width: 90rpx;
+  height: 90rpx;
+  margin:0 20rpx;
+}
+
+.horizon {
+  width: 660rpx;
+  height: 1px;
+  background-color: #e5e5e5;
+  vertical-align: middle;
+  position: relative;
+  top: 46rpx;
+  margin: 0 auto;
+  z-index: -99;
+}
+
+.detail{
+  color: #666;
+  font-size: 34rpx;
+  font-family: MicroSoft Yahei;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  margin-right: 30rpx;
+  line-height: 46rpx;
+  letter-spacing: 2px;
+}
+.english{
+  position: relative;
+  float: left;
+  width: auto;
+}
+.word_contain{
+  margin: 7rpx;
+  border-radius: 15rpx
+}
+.word_touch{
+  background: #fec170;
+}
+.buttom{
+  width: 750rpx;
+  height: 150rpx;
+}
+.new{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button{
+  margin:0;
+  padding:0;
+  background-color:#ffffff;
+  line-height:inherit;
+  height:100rpx;
+  border-radius:0;
+  border:none;
+  font-size:30rpx;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+button::after{
+  border: none;
+}
+.dict_top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.word_title{
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.word_collect icon{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 30rpx;
+}
+.phone{
+  display: flex;
+  flex-direction: row;
+  font-size: 33rpx;
+  color: #2196f3;
+}
+.ph{
+  margin-right: 20rpx;
+}
+.word_tip{
+  display: flex;
+  flex-direction: column;
+}

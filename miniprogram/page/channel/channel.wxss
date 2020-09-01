@@ -1,0 +1,133 @@
+.page{
+    position: relative;
+}
+.search_area{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-color:#fff;
+    display:none;
+    background: rgba(255,255,255,0.9)
+}
+.search_area_more{
+    display: block;
+    z-index: 2;
+}
+.back{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 40rpx;
+    font-weight: bolder;
+}
+.back icon{
+    padding:10rpx;
+}
+.back1{
+    position: absolute;
+    top: 280rpx;
+    height: 960rpx;
+    width: 750rpx;
+}
+.searchBar{
+    float: unset;
+    width: 100%;
+}
+.search_input{
+    position:relative;
+    left:30rpx;
+    width:630rpx;
+    height:100rpx;
+    font-size: 30rpx;
+    border-radius:16rpx;
+    background-color:#eef;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transition: linear 1s;
+}
+.search_input icon{
+    padding: 10rpx;
+}
+.dict_out{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin:60rpx 0;
+}
+.dict_out icon{
+    padding: 10rpx;
+}
+.input{
+    position:relative;
+    left:30rpx;
+    width:350rpx;
+    height:100rpx;
+    font-size: 30rpx;
+    border-radius:16rpx;
+    background-color:#eef;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.search_content{
+    height: 80%;
+    overflow:scroll;
+}
+.search_item{
+    margin: 10rpx 30rpx;
+    font-size: 30rpx;
+    padding: 10rpx 10rpx;
+    border-bottom: 1px solid #ccc;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.words{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.word{
+    font-weight: bolder;
+    font-size: 35rpx;
+    margin-right: 10rpx;
+}
+.channel_area{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.list{
+    position: relative;
+    float: left;
+    width: 25%;
+    margin: 20rpx 0;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.cells{
+    height: 187.5rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.cell{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30rpx;
+}
+.cell icon{
+    padding: 16rpx;
+}

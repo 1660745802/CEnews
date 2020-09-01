@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-load-more": "../../components/dist/load-more/index",
+    "mp-halfScreenDialog": "/miniprogram_npm/weui-miniprogram/half-screen-dialog/half-screen-dialog"
+  }
+}

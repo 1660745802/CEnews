@@ -1,0 +1,74 @@
+<!-- 新闻详情页 -->
+<view class='container'>
+    <!-- 详情页顶部轮播图 -->
+    <swiper hidden="{{item}}" indicator-active-color="#2167F3"  indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="getCurrent" style='height:{{imgHeis[current]}}'>
+        <block wx:for="{{images}}" wx:key="index" wx:for-index="index" >
+            <swiper-item>
+                <image src="{{item}}" style=" height:{{imgHeis[current]}}" mode="widthFix" bindload='imgH' data-id="{{index}}"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- 详情页内容 -->
+    <text class='title'>{{title}}</text>
+    <view class='author-date'>
+        <text class='date'>{{focus_date}}</text>
+    </view>
+    <!-- 收藏、分享 -->
+    <view class='tool'>
+        <view class='circle-img'>
+            <view class="collect">
+                <icon class="t-icon t-icon-zu" wx:if="{{!collected}}" catchtap="collectTap" />
+                <icon class="t-icon t-icon-zu-copy" wx:else catchtap="collectTap" />
+            </view>
+            <button size="mini" open-type="share" >
+                <icon class="t-icon t-icon-fenxiang1"/>
+            </button>
+        </view>
+        <view class='horizon'></view>
+    </view>
+    <!-- 中英文内容 -->
+    <view class="new" wx:for="{{content}}" wx:key="index">
+        <view class='detail'>{{content[index]}}</view>
+        <view class='detail' hidden="{{!hid[index]}}">
+            <view class="english">{{biaodian[index][0]}}</view>
+            <view class="english" wx:for="{{englishContent[index]}}" wx:for-index="id">
+                <!-- 将分开的单词和符号重组 -->
+                <view class="word_contain" hover-class="word_touch" hover-stay-time="1000" bindtap="showDict" data-word='{{englishContent[index][id]}}'>{{englishContent[index][id]}}{{biaodian[index][id + 1]}}</view>
+            </view>
+        </view>
+        <!-- 点击查看英文内容 -->
+        <view bindtap="trans" style="color:#B5B5B5" data-id="{{index}}" hidden="{{hid[index]}}">---点击查看翻译---</view>
+    </view>
+    <view class="horizon"></view>
+    <i-load-more tip="没有更多了~" loading="{{false}}" />
+</view>
+<!-- 文中点击单词后的查词释义框 -->
+<view class="fadeIn" wx:if="{{show}}">
+    <view class="weui-mask"  bindtap="close"></view>
+    <view class="weui-half-screen-dialog">
+        <view class="weui-half-screen-dialog__hd">
+            <view class="weui-half-screen-dialog__hd__side" bindtap="close">
+                <icon class="t-icon t-icon-arrow-left-bold" />
+            </view>
+        </view>
+        <view class="weui-half-screen-dialog__bd" style="padding-top:2px;height:33vh;">
+            <scroll-view scroll-y>
+                <!-- 单词名，单词收藏 -->
+                <view class="dict_top">
+                    <view class="word_title">{{word}}</view>
+                    <view class="word_collect" catchtap="word_collect">
+                        <icon class="t-icon t-icon-favorite" wx:if="{{!word_collected}}"/>
+                        <icon class="t-icon t-icon-collection-fill" wx:else/>
+                    </view>
+                </view>
+                <!-- 音标 -->
+                <view class="phone">
+                    <view class="ph" hidden="{{!ukphone}}">英：/{{ukphone}}/</view>
+                    <view class="ph" hidden="{{!usphone}}">美：/{{usphone}}/</view>
+                </view>
+                <!-- 释义 -->
+                <view wx:for="{{word_tip}}" class="word_tip">{{item}}</view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,23 @@
+<!-- 新闻收藏页面 -->
+<!-- 清空按钮 -->
+<view class="del">
+    <button size="mini" bindtap="deleteAll">清空</button>
+</view>
+<!-- 收藏列表，左划删除 -->
+<view wx:for="{{newslist}}" wx:key="index" data-item="{{dateitem}}" data-id="{{index}}">
+    <i-swipeout  i-class="i-swipeout-demo-item" operateWidth="{{85}}">
+        <view slot="content">
+            <navigator class="read_news" url="../news/news?url={{item.news.url}}&date={{item.news.focus_date}}&title={{item.news.title}}&image={{item.news.image}}">
+                <view class="new_left"> 
+                    <view class="new_title">{{item.news.title}}</view>
+                </view>
+                <view class="i-swipeout-image">
+                    <view class="new_right"><image mode="aspectFill" src="{{item.news.image}}"></image></view>
+                </view>
+            </navigator>
+        </view>
+        <view slot="button" data-item="{{dateitem}}" data-id="{{index}}" class="i-swipeout-demo-button" bindtap="deleteCollection">删除</view>
+    </i-swipeout>
+</view>
+<!-- 收藏列表为空时显示画面 -->
+<image wx:if="{{newslist[0]===undefined}}" class="no_data" src="../../static/image/no_data.png"></image>

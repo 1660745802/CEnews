@@ -1,0 +1,30 @@
+<!-- 首页 -->
+<view class="home_area">
+    <!-- 首页头图 -->
+    <view class="top_view">
+        <image mode="widthFix" src="{{imgUrl}}" />
+    </view>
+    <!-- 新闻列表 -->
+    <view class="new_container">
+        <view class="new" wx:for="{{list}}" wx:key="article_id">
+            <navigator class="new_area" url="../news/news?url={{item.url}}&date={{item.focus_date}}&title={{item.title}}&image={{item.image}}" data-id="{{index}}" bindtap="bindHistory">
+                <view class="left">
+                    <view class="title">{{item.title}}</view>            
+                    <view class="short_content">{{item.brief}}</view>
+                </view>
+                <view class="right" wx:if="{{item.image}}">
+                    <image mode="aspectFill" class="news_image" src="{{item.image}}"></image>
+                </view>
+            </navigator>
+            <view class="tips">
+                <view class="tip_left">
+                    <view class="newsinfo">{{item.focus_date}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 返回顶部按钮 -->
+<view class="back_top">
+    <icon class="t-icon t-icon-zhiding" hidden="{{!floorstatus}}" bindtap="back_top" style="opacity: 0.4;"></icon>
+</view>

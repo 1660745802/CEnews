@@ -1,0 +1,17 @@
+<!-- 单词本页面 -->
+<!-- 单词列表 -->
+<view class="word_area" wx:for="{{wordlist}}" wx:key="word_id">
+    <view class="word">
+        <view class="word_title">
+            <view class="name">{{item.word}}</view>
+            <view class="phone">/{{item.word_phone}}/</view>
+        </view>
+        <view class="word_tip">{{item.word_tip}}</view>
+    </view>
+    <view data-id="{{index}}" catchtap="word_collect">
+        <icon class="t-icon t-icon-favorite" wx:if="{{!item.word_collected}}"/>
+        <icon class="t-icon t-icon-collection-fill" wx:else/>
+    </view>
+</view>
+<!-- 单词本为空时显示画面 -->
+<image wx:if="{{wordlist[0]===undefined}}" class="no_data" src="../../static/image/no_data.png"></image>

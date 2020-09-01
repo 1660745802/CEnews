@@ -1,0 +1,15 @@
+// 显示或隐藏查词界面
+function hiddenMask(e,owner){
+    var dict = owner.selectComponent('.search_area');
+    if (dict.hasClass('search_area_more')){
+        dict.removeClass('search_area_more')
+    }
+    else{
+        dict.addClass('search_area_more')
+    }
+}
+
+module.exports={
+    hiddenMask: hiddenMask
+}
+

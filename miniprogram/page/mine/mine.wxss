@@ -1,0 +1,71 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.top-view{
+  height: 510rpx;
+  width: 750rpx;
+  padding: 40rpx;
+  background-color: #2196F3;
+  color: white;
+  border-bottom-left-radius: 105rpx;
+  border-bottom-right-radius: 105rpx;
+}
+.top-view .user{
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.userimage{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.username{
+  font-size: 40rpx;
+  font-weight: 20rpx;
+}
+.function-view{
+  position: absolute;
+  top: 450rpx;
+  width: 640rpx;
+  margin: 30rpx 0rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 15rpx;
+  background-color: white;
+  font-size: 35rpx;
+}
+.function-view  .list .left{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.function-view .list .left icon{
+  height: 60rpx;
+  width: 60rpx;
+  margin-right: 10rpx;
+}
+.list .right{
+  margin: 0 20rpx;
+  width: 16rpx;
+  height: 16rpx;
+}
+.function-view .lit{
+  padding: 40rpx;
+  font-size: 35rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.function-view .list{
+  padding: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

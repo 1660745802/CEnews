@@ -60,3 +60,4 @@
 
    > https://api.ai.qq.com;https://btrace.qq.com;https://cm.l.qq.com;https://dict.youdao.com;https://fanyi.youdao.com;https://i.news.qq.com;https://img.lssdjt.com;https://lssdjt.com;https://military.cctv.com;https://new.qq.com;https://news.cctv.com;https://open.iciba.com;https://photo.cctv.com;https://tmt.tencentcloudapi.com;https://translate.google.cn;https://tv.cctv.com;
 "# CEnews" 
+"# CEnews" 

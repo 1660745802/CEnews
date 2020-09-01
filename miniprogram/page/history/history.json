@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-swipeout": "../../components/dist/swipeout/index"
+  },
+  "backgroundColor": "#2196F3",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "浏览历史",
+  "enablePullDownRefresh": true
+}

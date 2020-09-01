@@ -1,0 +1,9 @@
+<!-- 问题反馈页面 -->
+<view class="point">
+    <icon class="t-icon t-icon-tianxie"></icon>
+    <view class="text">请填写反馈内容</view>
+</view>
+<form bindsubmit="bindFormSubmit" class="area">
+    <textarea class="feed_content" placeholder="请填写您的反馈意见或建议，非常感谢" name="textarea"></textarea>
+    <button class="send" form-type="submit">提交</button>
+</form>

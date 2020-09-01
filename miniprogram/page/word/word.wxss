@@ -1,0 +1,53 @@
+.word_area{
+    width: 750rpx;
+    height: 250rpx;
+    background-color: white;
+    border: 1rpx solid #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.word{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.word_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20rpx;
+}
+.name{
+    margin: 20rpx 20rpx 5rpx 10rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.phone{
+    margin: 20rpx 0 5rpx 10rpx;
+    font-size: 34rpx;
+    font-weight: bold;
+    color: rgb(114, 109, 109);
+}
+.word_tip{
+    margin: 20rpx 30rpx;
+    font-size: 30rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.word_area icon{
+    margin: 0 40rpx 60rpx 0;
+    padding: 15rpx
+}
+.no_data{
+    position: absolute;
+    top:37%;
+    left: 37%;
+    width: 300rpx;
+    height: 300rpx;
+}

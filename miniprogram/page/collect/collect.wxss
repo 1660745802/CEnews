@@ -1,0 +1,72 @@
+.del{
+    background-color: #2196F3;
+}
+button{
+    position: sticky;
+    top:20rpx;
+    left: 680rpx;
+    color: white;
+    font-size: 30rpx;
+    background-color: #2196F3;
+}
+.collect_new{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.read_date{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30rpx;
+}
+.read_date icon{
+    padding: 20rpx;
+}
+.read_date .datetext{
+    font-size: 45rpx;
+}
+.read_news{
+    display: flex;
+    align-items: center;
+}
+.new_left{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-right: 10rpx;
+}
+.new_title{
+    font-size: 35rpx;
+    font-weight: border;
+    line-height: 175%;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.new_right image{
+    width: 150rpx;
+    height: 150rpx;
+    margin: 20rpx 0 0 10rpx;
+    border-radius: 25rpx;
+    overflow: hidden;
+}
+.i-swipeout-demo-button{
+    height: 150rpx;
+    margin: 52rpx 20rpx 0 0;
+    border-radius: 25rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40rpx;
+    color: white;
+    background-color: #2196F3;
+}
+.no_data{
+    position: absolute;
+    top:37%;
+    left: 37%;
+    width: 300rpx;
+    height: 300rpx;
+}

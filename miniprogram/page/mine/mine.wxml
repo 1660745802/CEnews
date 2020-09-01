@@ -1,0 +1,40 @@
+<!-- 个人页面 -->
+<view class="container">
+  <!-- 根据登录状态显示的头像和昵称 -->
+  <view class="top-view">
+    <view class="user" wx:if="{{userInfo}}">
+        <image class="userimage" src="{{userInfo.avatarUrl}}"></image>
+        <view class="username">{{userInfo.nickName}}</view>
+    </view>
+    <view class="user" wx:else="{{userInfo}}">
+        <image class="userimage" src="../../static/image/defalut_image.png"></image>
+        <view class="username">未登录</view>
+    </view>
+  </view> 
+  <!-- 已登录功能列表 -->
+  <template name="list">
+    <navigator class="list" url="{{url}}">
+      <view class="left">
+        <icon class="{{icon_font}}"></icon>
+        <view> {{content}} </view>
+      </view>
+      <view class="right">
+        <icon class='t-icon t-icon-arrow-double-left'></icon>
+      </view>
+    </navigator>
+  </template>
+  <!-- 未登录时封闭功能 -->
+  <view class="function-view">
+    <view class="lit" wx:if="{{!userInfo}}">
+      <view>您尚未绑定账号进行登录,</view>
+      <view>功能区暂不完全开放</view>
+    </view>
+    <view wx:if="{{userInfo}}">
+      <template is="list" data="{{...collect}}"></template>   
+      <template is="list" data="{{...word}}"></template>  
+      <template is="list" data="{{...history}}"></template>  
+      <template is="list" data="{{...feedback}}"></template>
+    </view>
+    <button hidden="{{userInfo}}" style="background-color:#2196F3; color:#fff; top:50rpx" open-type="getUserInfo" bindgetuserinfo="fetchInfo">{{loginstate}}</button>
+  </view>
+</view>
